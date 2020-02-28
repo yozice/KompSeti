@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="script/clientScript.js"></script>
+    <style type="text/css">
+        #MovingBannerContainer
+        {
+            background-color: #FF7F50;
+            width: 900px;
+        }
+        #MovingBanner
+        {
+            border-style: solid;
+            border-width: medium;
+            background-color: #87CEEB;
+            color: #0000FF;
+            width: 300px;
+            line-height: 50px;
+            vertical-align: bottom;
+            text-align: center;
+            position: relative;
+            left: 100px;
+        }
+    </style>
+</head>
+<body onload="loadTest(); MovingBanner(0, true)">
+    <form action="JavaScript:ArithmeticTest()" />
+    <div id="question1"></div>
+    <input id ="answer1" type="text"/>
+    <div id="question2"></div>
+    <input id ="answer2" type="text"/>
+    <div id="question3"></div>
+    <input id ="answer3" type="text"/>
+    <div><input type="submit"></div>
+    <div id = "MovingBannerContainer">
+        <div id = "MovingBanner">
+            Движущийся баннер
+        </div>
+    </div>
+</body>
+</html>

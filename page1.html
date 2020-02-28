@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ЛР 7</title>
+    <style>
+        #layer1, #layer2, #layer3, #layer4 {
+            position: relative; /* Относительное позиционирование */
+        }
+        #layer1{}
+        #layer2{
+            top: -300px; /* Сдвигаем текст вверх */
+            left: 30px; /* Сдвигаем текст вправо */
+        }
+        #layer3{
+            top: -600px; /* Сдвигаем текст вверх */
+            left: 60px; /* Сдвигаем текст вправо */
+        }
+        #layer4{
+            top: -900px; /* Сдвигаем текст вверх */
+            left: 90px; /* Сдвигаем текст вправо */
+        }
+        #layer1 { z-index: 1; }
+        #layer2 { z-index: 2; }
+        #layer3 { z-index: 3; }
+        #layer4 { z-index: 4; }
+    </style>
+</head>
+<body>
+    <div id="layer1"><img src="images/heart.png", border="1px"></img></div>
+    <div id="layer2"><img src="images/piki.png", border="1px"></img></div>
+    <div id="layer3"><img src="images/kresti.png", border="1px"></img></div>
+    <div id="layer4"><img src="images/bubi.png", border="1px"></img></div>
+</body>
+</html>

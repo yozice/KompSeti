@@ -1,0 +1,87 @@
+ * {
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: url("../images/TeslaCars.jpg");
+}
+.navigation {
+    position: absolute;
+
+    height: 50px;
+    left: 0px;
+    top: 0px;
+    width: 600px;
+
+    list-style-type: none;
+}
+
+.navigation ul {
+    position: absolute;
+
+    display: none;
+    list-style-type: none;
+    top: 100%;
+}
+
+.navigation > li:hover > ul {
+    display: block;
+}
+
+.navigation li {
+    float: left;
+    background-color: dimgrey;
+
+    font-size: xx-large;
+
+    height: 50px;
+
+    padding-top: 10px;
+    position: relative;
+    text-align: center;
+}
+
+.navigation li > a {
+    color: white;
+
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+
+    text-decoration: none;
+}
+
+.navigation li > a:hover {
+    border-radius: 10px;
+    background-color: darkkhaki;
+}
+
+
+.navigation li:hover > .about {
+    display: block;
+}
+
+.navigation li:hover > .about > li{
+    background-color: grey;
+}
+
+.navigation li li {
+    width: 120%;
+}
+
+.navigation li > .solar {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    display: none;
+    width: auto;
+}
+
+.navigation li:hover > .solar {
+    display: block;
+}
+
+.navigation li:hover > .solar > li{
+    background-color: lightslategrey;
+}

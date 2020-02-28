@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="head">
+    <div class="center">
+        Тест по русскому языку:
+    </div>
+    <form id="Test" action="testResults.php" method="POST" name="test">
+        <div id="countDown" onload="countDown();">
+        </div>
+        <ol>
+            <li>
+                Часть речи, являющееся наименованием предмета, субъекта, живого существа - это
+                <div>
+                    <label>
+                        <input name="q1" type="radio" value="true"/>Глагол
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input name="q1" type="radio" value="false"/>Существительное
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input name="q1" type="radio" value="false"/>Наречие
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input name="q1" type="radio" value="false"/>Междометие
+                    </label>
+                </div>
+            </li>
+            <li>
+                Укажите пример с ошибкой в образовании формы слова.
+                <div>
+                    <label>
+                        <input name="q2" type="radio" value="true"/>Cемьюстами пятидесяти пяти шутками
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input name="q2" type="radio" value="false"/>Высочайший
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input name="q2" type="radio" value="false"/>Шесть грузин
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input name="q2" type="radio" value="false"/>Вкусные торты
+                    </label>
+                </div>
+            </li>
+            <li>
+                Какое из нижеперечисленных словосочетаний является союзом?
+                <div>
+                    <label>
+                        <input name="q3" type="radio" value="true"/>Как будто
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input name="q3" type="radio" value="false"/>Лишь бы
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input name="q3" type="radio" value="false"/>В продолжение
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input name="q3" type="radio" value="false"/>Не спеша
+                    </label>
+                </div>
+            </li>
+            <li>
+                В каких словах пишется две буквы Н?
+                <div>
+                    <label>
+                        <input name="q4[]" type="checkbox" value="true"/>Моще(н)ая булыжником дорога
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input name="q4[]" type="checkbox" value="false"/>Краше(н)ый пол
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input name="q4[]" type="checkbox" value="false"/>Мы увере(н)ы в победе
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input name="q4[]" type="checkbox" value="false"/>Жёва(н)ый
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input name="q4[]" type="checkbox" value="true"/>Рифмова(нн)ый
+                    </label>
+                </div>
+            </li>
+            <li>
+                Укажите варианты, в котором правильно указаны все примеры, где на месте пропуска пишется Ь.
+                <div>
+                    <label>
+                        <input name="q5[]" type="checkbox" value="false"/>Старик только шевелит губами и крестит_ся, отец же громко шепчет и конец каждой молитвы произносит вслух и отчётливо.
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input name="q5[]" type="checkbox" value="false"/>Машинист и его помощ_ник, люди очень хладнокровные и равнодушные, делают какие-т непонятные движения и не спешат.
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input name="q5[]" type="checkbox" value="true"/>На другой день утром к следователю был приведён из Кляузовки молодой парень с большой головой и заяч_ей губой.
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input name="q5[]" type="checkbox" value="true"/>Юноша ни на минуту не мог отделат_ся от странного, неприятного чувства.
+                    </label>
+                </div>
+            </li>
+            <input type="submit" value="Проверить"/>
+        </ol>
+    </form>
+    </div>
+</body>
+</html>

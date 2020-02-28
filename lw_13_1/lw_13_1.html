@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <title>13.1 Тестирование</title>
+
+    <script>
+        function setDisable() {
+            document.dayCount.radioBoxName[0].disabled = "disabled";
+            document.dayCount.radioBoxName[1].disabled = "disabled";
+            document.dayCount.radioBoxName[2].disabled = "disabled";
+
+            document.monthInYear.checkBoxMonth[0].disabled = "disabled";
+            document.monthInYear.checkBoxMonth[1].disabled = "disabled";
+            document.monthInYear.checkBoxMonth[2].disabled = "disabled";
+            document.monthInYear.checkBoxMonth[3].disabled = "disabled";
+            document.monthInYear.checkBoxMonth[4].disabled = "disabled";
+        }
+    </script>
+
+    <script>
+        function checkTest() {
+            window.clearInterval(window.timerId);
+
+            let score = 0.;
+            if (document.dayCount.radioBoxName[1].checked) {
+                score += 1.;
+            }
+
+            if (document.monthInYear.checkBoxMonth[0].checked) {
+                score += 1.;
+            }
+            if (document.monthInYear.checkBoxMonth[3].checked) {
+                score += 1.;
+            }
+            if (document.monthInYear.checkBoxMonth[4].checked) {
+                score += 1.;
+            }
+
+            alert("Вы набрали " + score + "/4" + " баллов!");
+
+            setDisable();
+        }
+    </script>
+
+    <script>
+        let secondsCount = Number(5);
+        function timer() {
+            if (secondsCount == -1) {
+                window.clearInterval(window.timerId);
+                checkTest();
+            } else {
+                document.getElementById("timer_clock").innerHTML = secondsCount.toString();
+                secondsCount -= 1;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="timer">
+        <p>Оставшееся время:</p>
+        <p id="timer_clock" style="color: black"></p>
+    </div>
+
+    <div id="test">
+        <p align="center"><i><b>Добро пожаловать на тест!</b></i></p>
+
+        <form name="dayCount">
+            <p><b>Сколько дней в неделе?</b></p>
+            <p><input name="radioBoxName" checked="checked" type="radio" value="Шесть">6</p>
+            <p><input name="radioBoxName" type="radio" value="Семь">7</p>
+            <p><input name="radioBoxName" type="radio" value="Восемь">8</p>
+        </form>
+
+        <form name="monthInYear">
+            <p><b>Каких месяцев нет в году?</b></p>
+            <p><input name="checkBoxMonth" type="checkbox" value="Январт">Январт</p>
+            <p><input name="checkBoxMonth" type="checkbox" value="Апрель">Апрель</p>
+            <p><input name="checkBoxMonth" type="checkbox" value="Июнь">Июнь</p>
+            <p><input name="checkBoxMonth" type="checkbox" value="Жестюль">Жестюль</p>
+            <p><input name="checkBoxMonth" type="checkbox" value="Ноябрист">Ноябрист</p>
+        </form>
+
+        <p align="center"><input type="button" value="Проверить" onclick="checkTest()"></p>
+    </div>
+
+    <script>
+        window.timerId = window.setInterval(timer, 1000);
+    </script>
+</body>
+</html>
